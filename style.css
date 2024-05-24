@@ -1,0 +1,142 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #333;
+}
+
+#controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#controls label,
+#controls button,
+#controls select,
+#controls input {
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 2px 7px;
+}
+
+#numElements,
+#randomize,
+#sortAlgo,
+#run {
+  border: 2px solid lightgray;
+}
+
+#container {
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bar.swap {
+  background-color: #f44336;
+}
+
+.bar.sorted {
+  background-color: #2196f3;
+}
+
+.bar {
+  position: relative; /* Add this line to make sure position: absolute works */
+  width: calc(100% / var(--num-bars));
+  background-color: #4caf50;
+  margin: 0 1px;
+  transition: height 0.2s;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  font-size: 13px;
+  color: black;
+}
+
+.descriptions {
+  width: 80%;
+  display: flex;
+  margin-top: 10vh;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2vw;
+  margin-bottom: 5vh;
+  justify-content: center;
+}
+.card {
+  height: 378px;
+  width: 253px;
+  margin-bottom: 10px;
+}
+
+.bubble {
+  background-image: url(bubble.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.selection {
+  background-image: url(selection.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  width: 270px;
+  margin-top: 15px;
+}
+.insertion {
+  background-image: url(insertion.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.quick {
+  background-image: url(quick.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.end {
+  color: black;
+  margin-bottom: 3vh;
+  font-weight: 900;
+}
+
+@media (max-width: 320px) {
+  .bar-label {
+    visibility: hidden;
+  }
+}
+@media (max-width: 480px) {
+  .bar-label {
+    visibility: hidden;
+  }
+}
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+  </head>
+  <body>
+    <h1 class="dm-sans">Sorting Visualizer</h1>
+    <div id="controls">
+      <label for="numElements" class="num dm-sans">Number of Elements:</label>
+      <input type="number" class="dm-sans" id="numElements" min="10" max="100" value="40" />
+      <button id="randomize" class="dm-sans">Randomize</button>
+      <label for="sortAlgo" class="choose dm-sans">Choose Algorithm:</label>
+      <select id="sortAlgo" class="dm-sans">
+        <option value="bubbleSort">Bubble Sort</option>
+        <option value="selectionSort">Selection Sort</option>
+        <option value="insertionSort">Insertion Sort</option>
+        <option value="quickSort">Quick Sort</option>
+      </select>
+      <label for="speed" class="speed dm-sans">Speed:</label>
+      <input type="range" id="speed" min="1" max="100" value="30" />
+      <button id="run" class="dm-sans">Run Sorting</button>
+    </div>
+    <div id="container"></div>
+    <div class="descriptions">
+      <div class="bubble card"></div>
+      <div class="selection card"></div>
+      <div class="insertion card"></div>
+      <div class="quick card"></div>
+    </div>
+    <div class="footer">
+      <div class="end dm-sans">Made with ❤️ by Hardik</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
